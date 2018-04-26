@@ -11,11 +11,12 @@
  * 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
  *
  */
-public class Easy_MaximumSubArray {
+public class MaximumSubArray {
 
     public int maxSubArray(int[] A) {
         int n = A.length;
-        int[] dp = new int[n]; //dp[i] means the maximum subarray ending with A[i];
+        // dp[i] 是A[i]的最大和连续子数组的值;
+        int[] dp = new int[n];
         dp[0] = A[0];
         int max = dp[0];
 
@@ -25,6 +26,11 @@ public class Easy_MaximumSubArray {
         }
 
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[] a = {-2,1,-3,4,-1,2,1,-5,4};
+        System.out.println(new MaximumSubArray().maxSubArray(a));
     }
 
 }

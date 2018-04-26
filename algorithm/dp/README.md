@@ -20,8 +20,6 @@ Fk是第k项前的最大序列和，求F1～FN中最大值。
 **状态转移方程的定义**:
 ```
 Fk = max{Fk-1 + Ak, Ak}
-Fk是前k项的和，Ak是第k项的值
-
-F0 = nums[0]
-求： F(nums.length) = ?
+Fk是第k项前的最大序列和，Ak是第k项的值
+求 max{F1, F2, ... FN}
 ```
